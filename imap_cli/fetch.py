@@ -117,7 +117,7 @@ def fetch(imap_account, message_set=None, message_parts=None):
             continue
         mail_parts = []
         for mail_part in mail:
-            mail_parts.append(mail_part.decode('utf-8'))
+            mail_parts.append(mail_part.decode('utf-8', "replace"))
         data.append(mail_parts)
 
     if typ == const.STATUS_OK:
